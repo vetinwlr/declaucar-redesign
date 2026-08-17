@@ -54,7 +54,7 @@ function ProdutosPage() {
       </Section>
 
       <Section tone="card">
-        <SectionHeading index="02" eyebrow="Marcas" title={brands.title} description={brands.text[0]} />
+        <SectionHeading index="02" eyebrow="Marcas" title={brands.title} description={brands.text[0] ?? ""} />
         <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
           {brands.list.map((brand) => (
             <BrandCard key={brand.name} {...brand} />
