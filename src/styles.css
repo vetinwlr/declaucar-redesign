@@ -6,7 +6,7 @@
 
 /*
  * Design system — Declaucar Auto Peças
- * Base grafite/aço + laranja exclusivo de CTA.
+ * Base grafite/aço + verde institucional exclusivo de CTA.
  * Trocar os valores de :root abaixo adapta o sistema para outro cliente.
  */
 
@@ -47,6 +47,9 @@
   --color-on-graphite: var(--on-graphite);
   --color-on-graphite-muted: var(--on-graphite-muted);
   --color-whats: var(--whats);
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-foreground: var(--brand-foreground);
 }
 
 :root {
@@ -60,9 +63,16 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.19 0.012 250);
 
-  /* laranja — reservado exclusivamente para CTA */
-  --primary: oklch(0.664 0.183 44.5);
-  --primary-foreground: oklch(0.145 0.01 250);
+  /* ── COR DA MARCA ──
+     Verde institucional Declaucar. Troque apenas --brand (e --brand-hover)
+     quando tiver o código oficial da cor; todo o site acompanha. */
+  --brand: oklch(0.52 0.107 156);
+  --brand-hover: oklch(0.46 0.1 156);
+  --brand-foreground: oklch(0.985 0.002 247);
+
+  /* verde — reservado exclusivamente para CTA e destaques */
+  --primary: var(--brand);
+  --primary-foreground: var(--brand-foreground);
 
   --secondary: oklch(0.94 0.004 247);
   --secondary-foreground: oklch(0.24 0.012 250);
@@ -78,7 +88,7 @@
 
   --border: oklch(0.9 0.005 247);
   --input: oklch(0.9 0.005 247);
-  --ring: oklch(0.664 0.183 44.5);
+  --ring: var(--brand);
 
   /* superfícies escuras */
   --graphite: oklch(0.183 0.011 250);
@@ -87,7 +97,7 @@
   --steel: oklch(0.55 0.017 250);
   --on-graphite: oklch(0.975 0.002 247);
   --on-graphite-muted: oklch(0.76 0.011 250);
-  --whats: oklch(0.79 0.19 149);
+  --whats: var(--brand);
 }
 
 .dark {
@@ -97,8 +107,11 @@
   --card-foreground: oklch(0.975 0.002 247);
   --popover: oklch(0.235 0.012 250);
   --popover-foreground: oklch(0.975 0.002 247);
-  --primary: oklch(0.664 0.183 44.5);
-  --primary-foreground: oklch(0.145 0.01 250);
+  --brand: oklch(0.58 0.113 156);
+  --brand-hover: oklch(0.52 0.107 156);
+  --brand-foreground: oklch(0.145 0.01 250);
+  --primary: var(--brand);
+  --primary-foreground: var(--brand-foreground);
   --secondary: oklch(0.28 0.012 250);
   --secondary-foreground: oklch(0.975 0.002 247);
   --muted: oklch(0.28 0.012 250);
@@ -107,7 +120,7 @@
   --accent-foreground: oklch(0.975 0.002 247);
   --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 16%);
-  --ring: oklch(0.664 0.183 44.5);
+  --ring: var(--brand);
 }
 
 @layer base {
