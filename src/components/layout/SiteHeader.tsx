@@ -114,7 +114,6 @@ export function SiteHeader() {
           </div>
         )}
       </div>
-      {open && <span className="sr-only"><X className="size-0" /></span>}
     </header>
   );
 }

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: definir BASE_URL quando o domínio final estiver ativo -->
+<urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9">
+  <url><loc>/</loc></url>
+  <url><loc>/produtos</loc></url>
+  <url><loc>/sobre</loc></url>
+  <url><loc>/contato</loc></url>
+</urlset>
