@@ -12,7 +12,7 @@ export function MobileContactBar() {
           className="inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-md bg-primary text-sm font-semibold text-primary-foreground"
         >
           <MessageCircle className="size-5" aria-hidden="true" />
-          Orçamento no WhatsApp
+          Fale Conosco!
         </a>
         <a
           href={telHref ?? "/contato"}
