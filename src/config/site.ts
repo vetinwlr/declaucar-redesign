@@ -37,11 +37,11 @@ export const site = {
     zip: "[CEP A CONFIRMAR]", // TODO_CONFIRMAR
   },
 
-  /** PLACEHOLDER — horários reais de atendimento */
+  /** Horários de atendimento (confirmados) */
   hours: [
-    { days: "Segunda a sexta", time: "[HORÁRIO A CONFIRMAR]" }, // TODO_CONFIRMAR
-    { days: "Sábado", time: "[HORÁRIO A CONFIRMAR]" }, // TODO_CONFIRMAR
-    { days: "Domingo e feriados", time: "[A CONFIRMAR]" }, // TODO_CONFIRMAR
+    { days: "Segunda a sexta", time: "07h50 às 17h50" },
+    { days: "Sábado", time: "07h50 às 12h50" },
+    { days: "Domingo e feriados", time: "Fechado" },
   ],
 
   /** PLACEHOLDER — cidades atendidas além de SJC */
