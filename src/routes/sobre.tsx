@@ -43,16 +43,18 @@ function SobrePage() {
 
       <Section>
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
+          {/* IMAGEM INSTITUCIONAL — siteImages.sobre (4/3) */}
           <div className="aspect-4/3 overflow-hidden rounded-md border border-border">
             <img
-              src={sobreImage}
-              alt="Atendimento no balcão da loja de auto peças com prateleiras organizadas"
-              width={1200}
-              height={912}
+              src={siteImages.sobre.src}
+              alt={siteImages.sobre.alt}
+              width={siteImages.sobre.width}
+              height={siteImages.sobre.height}
               loading="lazy"
               className="size-full object-cover"
             />
           </div>
+
           <div>
             <div className="space-y-3 text-base leading-relaxed text-muted-foreground">
               {about.paragraphs.map((p) => (
