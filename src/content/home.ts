@@ -1,10 +1,8 @@
-import catMotor from "@/assets/cat-motor.jpg";
-import catFreios from "@/assets/cat-freios.jpg";
-import catSuspensao from "@/assets/cat-suspensao.jpg";
-import catEletrica from "@/assets/cat-eletrica.jpg";
-import catFiltros from "@/assets/cat-filtros.jpg";
-import catTransmissao from "@/assets/cat-transmissao.jpg";
-import catArrefecimento from "@/assets/cat-arrefecimento.jpg";
+// Imagens: NÃO importar arquivos diretamente aqui.
+// Todas as fotos vêm do registro central em src/config/images.ts,
+// onde estão as instruções de substituição pelas fotografias reais.
+import { siteImages } from "@/config/images";
+
 
 export const hero = {
   eyebrow: "Auto peças · São José dos Campos · desde [ANO A CONFIRMAR]",
