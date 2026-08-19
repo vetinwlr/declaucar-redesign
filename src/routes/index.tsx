@@ -99,15 +99,17 @@ function Home() {
             </div>
 
             <div className="relative lg:col-span-5">
+              {/* IMAGEM HERO — siteImages.hero (3/4 no desktop, 4/3 no mobile) */}
               <div className="aspect-4/3 overflow-hidden rounded-md border border-graphite-line/60 lg:aspect-3/4">
                 <img
-                  src={heroImage}
-                  alt="Balcão de atendimento da Declaucar com discos de freio e peças automotivas"
-                  width={1280}
-                  height={1600}
+                  src={siteImages.hero.src}
+                  alt={siteImages.hero.alt}
+                  width={siteImages.hero.width}
+                  height={siteImages.hero.height}
                   className="size-full object-cover"
                 />
               </div>
+
               <div className="absolute bottom-4 left-4 rounded-md border border-graphite-line bg-graphite/90 px-4 py-3 backdrop-blur-sm">
                 <p className="num-display text-2xl text-on-graphite">{hero.badge.value}</p>
                 <p className="text-xs text-on-graphite-muted">{hero.badge.label}</p>
