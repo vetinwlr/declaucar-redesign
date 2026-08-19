@@ -1,10 +1,8 @@
-import catMotor from "@/assets/cat-motor.jpg";
-import catFreios from "@/assets/cat-freios.jpg";
-import catSuspensao from "@/assets/cat-suspensao.jpg";
-import catEletrica from "@/assets/cat-eletrica.jpg";
-import catFiltros from "@/assets/cat-filtros.jpg";
-import catTransmissao from "@/assets/cat-transmissao.jpg";
-import catArrefecimento from "@/assets/cat-arrefecimento.jpg";
+// Imagens: NÃO importar arquivos diretamente aqui.
+// Todas as fotos vêm do registro central em src/config/images.ts,
+// onde estão as instruções de substituição pelas fotografias reais.
+import { siteImages } from "@/config/images";
+
 
 export const hero = {
   eyebrow: "Auto peças · São José dos Campos · desde [ANO A CONFIRMAR]",
@@ -25,47 +23,55 @@ export const credibility = [
 export const categories = [
   {
     name: "Motor",
-    image: catMotor,
+    image: siteImages.categoriaMotor.src,
+    imageAlt: siteImages.categoriaMotor.alt,
     items: "Juntas, bombas, correias, kits de distribuição",
     confirmed: true,
   },
   {
     name: "Freios",
-    image: catFreios,
+    image: siteImages.categoriaFreios.src,
+    imageAlt: siteImages.categoriaFreios.alt,
     items: "Pastilhas, discos, tambores, cilindros",
     confirmed: true,
   },
   {
     name: "Suspensão",
-    image: catSuspensao,
+    image: siteImages.categoriaSuspensao.src,
+    imageAlt: siteImages.categoriaSuspensao.alt,
     items: "Amortecedores, molas, bandejas, pivôs",
     confirmed: true,
   },
   {
     name: "Elétrica",
-    image: catEletrica,
+    image: siteImages.categoriaEletrica.src,
+    imageAlt: siteImages.categoriaEletrica.alt,
     items: "Alternadores, velas, sensores, chicotes",
     confirmed: false,
   },
   {
     name: "Filtros",
-    image: catFiltros,
+    image: siteImages.categoriaFiltros.src,
+    imageAlt: siteImages.categoriaFiltros.alt,
     items: "Óleo, ar, combustível, cabine",
     confirmed: false,
   },
   {
     name: "Transmissão",
-    image: catTransmissao,
+    image: siteImages.categoriaTransmissao.src,
+    imageAlt: siteImages.categoriaTransmissao.alt,
     items: "Embreagens, homocinéticas, rolamentos",
     confirmed: false,
   },
   {
     name: "Arrefecimento",
-    image: catArrefecimento,
+    image: siteImages.categoriaArrefecimento.src,
+    imageAlt: siteImages.categoriaArrefecimento.alt,
     items: "Radiadores, bombas d'água, válvulas termostáticas",
     confirmed: false,
   },
 ];
+
 
 export const steps = [
   {

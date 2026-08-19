@@ -1,8 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ShieldCheck, Wrench } from "lucide-react";
 
-import heroImage from "@/assets/hero-balcao.jpg";
-import sobreImage from "@/assets/sobre-loja.jpg";
+// Imagens vêm do registro central (src/config/images.ts), onde estão as
+// instruções para substituir cada placeholder pela fotografia real.
+import { placeholderNotice, siteImages } from "@/config/images";
+
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { SectionHeading } from "@/components/ui-blocks/SectionHeading";
@@ -97,15 +99,17 @@ function Home() {
             </div>
 
             <div className="relative lg:col-span-5">
+              {/* IMAGEM HERO — siteImages.hero (3/4 no desktop, 4/3 no mobile) */}
               <div className="aspect-4/3 overflow-hidden rounded-md border border-graphite-line/60 lg:aspect-3/4">
                 <img
-                  src={heroImage}
-                  alt="Balcão de atendimento da Declaucar com discos de freio e peças automotivas"
-                  width={1280}
-                  height={1600}
+                  src={siteImages.hero.src}
+                  alt={siteImages.hero.alt}
+                  width={siteImages.hero.width}
+                  height={siteImages.hero.height}
                   className="size-full object-cover"
                 />
               </div>
+
               <div className="absolute bottom-4 left-4 rounded-md border border-graphite-line bg-graphite/90 px-4 py-3 backdrop-blur-sm">
                 <p className="num-display text-2xl text-on-graphite">{hero.badge.value}</p>
                 <p className="text-xs text-on-graphite-muted">{hero.badge.label}</p>
@@ -234,19 +238,21 @@ function Home() {
       <Section tone="card">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
           <Reveal>
+            {/* IMAGEM INSTITUCIONAL — siteImages.sobre (4/3) */}
             <div className="aspect-4/3 overflow-hidden rounded-md border border-border">
               <img
-                src={sobreImage}
-                alt="Interior da loja de auto peças com prateleiras organizadas e atendimento no balcão"
-                width={1200}
-                height={912}
+                src={siteImages.sobre.src}
+                alt={siteImages.sobre.alt}
+                width={siteImages.sobre.width}
+                height={siteImages.sobre.height}
                 loading="lazy"
                 className="size-full object-cover"
               />
             </div>
-            <p className="mt-2 text-xs text-muted-foreground">
-              Imagem provisória — substituir por fotografia real da loja e da equipe.
-            </p>
+            {siteImages.sobre.status === "placeholder" && (
+              <p className="mt-2 text-xs text-muted-foreground">{placeholderNotice}</p>
+            )}
+
           </Reveal>
           <Reveal delay={60}>
             <SectionHeading index="05" eyebrow="A empresa" title="Mais de 30 anos de estrada" />

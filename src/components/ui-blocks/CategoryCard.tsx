@@ -4,11 +4,14 @@ import { buildWhatsAppUrl, whatsappMessages } from "@/lib/whatsapp";
 export function CategoryCard({
   name,
   image,
+  imageAlt,
   items,
   confirmed = true,
 }: {
   name: string;
+  /** Vem do registro central em src/config/images.ts — não importar arquivo direto. */
   image: string;
+  imageAlt?: string;
   items: string;
   confirmed?: boolean;
 }) {
@@ -19,16 +22,18 @@ export function CategoryCard({
       rel="noopener noreferrer"
       className="group relative block overflow-hidden rounded-md border border-graphite-line/40 bg-graphite"
     >
+      {/* IMAGEM DA CATEGORIA — proporção 4/3 fixa: trocar o arquivo não altera o card */}
       <div className="aspect-4/3 overflow-hidden">
         <img
           src={image}
-          alt={`Peças de ${name.toLowerCase()}`}
+          alt={imageAlt ?? `Peças de ${name.toLowerCase()}`}
           width={800}
           height={600}
           loading="lazy"
           className="size-full object-cover opacity-70 transition-transform duration-300 group-hover:scale-105"
         />
       </div>
+
       <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-graphite via-graphite/85 to-transparent p-4 pt-10">
         <div className="flex items-start justify-between gap-2">
           <h3 className="text-lg font-bold text-on-graphite group-hover:underline">{name}</h3>
