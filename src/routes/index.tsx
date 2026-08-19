@@ -1,8 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ShieldCheck, Wrench } from "lucide-react";
 
-import heroImage from "@/assets/hero-balcao.jpg";
-import sobreImage from "@/assets/sobre-loja.jpg";
+// Imagens vêm do registro central (src/config/images.ts), onde estão as
+// instruções para substituir cada placeholder pela fotografia real.
+import { placeholderNotice, siteImages } from "@/config/images";
+
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { SectionHeading } from "@/components/ui-blocks/SectionHeading";
