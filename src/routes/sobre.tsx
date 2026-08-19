@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import sobreImage from "@/assets/sobre-loja.jpg";
+// Imagem vinda do registro central — ver src/config/images.ts
+import { siteImages } from "@/config/images";
+
 import { Section } from "@/components/layout/Section";
 import { SectionHeading } from "@/components/ui-blocks/SectionHeading";
 import { Timeline } from "@/components/ui-blocks/Timeline";
