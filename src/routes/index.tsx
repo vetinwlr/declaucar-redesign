@@ -238,19 +238,21 @@ function Home() {
       <Section tone="card">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
           <Reveal>
+            {/* IMAGEM INSTITUCIONAL — siteImages.sobre (4/3) */}
             <div className="aspect-4/3 overflow-hidden rounded-md border border-border">
               <img
-                src={sobreImage}
-                alt="Interior da loja de auto peças com prateleiras organizadas e atendimento no balcão"
-                width={1200}
-                height={912}
+                src={siteImages.sobre.src}
+                alt={siteImages.sobre.alt}
+                width={siteImages.sobre.width}
+                height={siteImages.sobre.height}
                 loading="lazy"
                 className="size-full object-cover"
               />
             </div>
-            <p className="mt-2 text-xs text-muted-foreground">
-              Imagem provisória — substituir por fotografia real da loja e da equipe.
-            </p>
+            {siteImages.sobre.status === "placeholder" && (
+              <p className="mt-2 text-xs text-muted-foreground">{placeholderNotice}</p>
+            )}
+
           </Reveal>
           <Reveal delay={60}>
             <SectionHeading index="05" eyebrow="A empresa" title="Mais de 30 anos de estrada" />
